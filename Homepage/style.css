@@ -17,33 +17,33 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 12px 5%;
+  padding: 15px 50px;
   background-color: rgba(13, 13, 13, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  z-index: 1000;
-  box-sizing: border-box;
+  z-index: 100;
 }
+
+/* Logo styles live in globals.css — shared across all pages */
 
 .menu {
   display: flex;
+  gap: 40px;
   align-items: center;
-  gap: 30px;
 }
 
 .nav-link {
-  font-size: 18px;
+  font-family: var(--h5-font-family);
+  font-size: 20px;
   color: #ddd;
   text-decoration: none;
   font-weight: 600;
   position: relative;
   padding: 5px 0;
   transition: color 0.3s ease;
-  white-space: nowrap;
 }
 
 .nav-link::after {
@@ -58,21 +58,25 @@
   border-radius: 2px;
 }
 
-.nav-link:hover { color: #a78bfa; }
-.nav-link:hover::after { width: 100%; }
+.nav-link:hover {
+  color: #a78bfa;
+}
 
+.nav-link:hover::after {
+  width: 100%;
+}
 /* =========================================
    Hero Section
    ========================================= */
 .hero-section {
-  padding-top: 100px;
-  padding-bottom: 60px;
+  padding-top: 20px; /* Reduced from 100px to close the gap */
+  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 80px); /* Subtracts the navbar height so it fits the screen perfectly */
   position: relative;
   overflow: visible;
 }
@@ -103,7 +107,7 @@
 
 .hero-content {
   background: rgba(255, 255, 255, 0.05);
-  padding: 60px 80px;
+  padding: 40px 80px; /* Changed top/bottom padding from 60px to 40px */
   border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(15px);

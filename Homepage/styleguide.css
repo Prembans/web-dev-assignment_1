@@ -5,10 +5,6 @@
   --h4-header4: rgba(0, 0, 0, 1);
   --h5-header5: rgba(0, 0, 0, 1);
   
-  /* Note: These variables are overwritten in globals.css */
-  --primary-color: rgba(0, 149, 255, 1);
-  --secondary-color: rgba(0, 0, 0, 1);
-  --background-color: rgba(255, 255, 255, 1);
   
   /* Added sans-serif fallbacks to all font families */
   --h5-font-family: "Roboto", Helvetica, sans-serif;
