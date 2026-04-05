@@ -1,6 +1,14 @@
 /* =========================================
    Home Page Wrapper
    ========================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
 .home-page {
   display: flex;
   flex-direction: column;
