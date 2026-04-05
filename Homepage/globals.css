@@ -22,11 +22,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* =========================================
-   SHARED DARK MODE — loaded on every page
-   via globals.css so theme carries across
-   all pages (movie pages, PHP page, homepage)
-   ========================================= */
 body.dark-mode {
   --background-color: #0d0d0d;
   --text-color: #eee;
@@ -44,11 +39,6 @@ body.dark-mode .nav-link {
   color: #eee !important;
 }
 
-/* =========================================
-   SHARED LOGO — defined here once so the
-   badge style and hover animation work on
-   every page without repeating in each CSS.
-   ========================================= */
 .logo {
   font-family: "Redressed-Regular", "Playfair Display", serif;
   font-size: 38px;
@@ -74,4 +64,3 @@ body.dark-mode .nav-link {
   transform: rotate(-10deg) scale(1.05);
   box-shadow: 0 8px 20px rgba(255, 38, 0, 0.4);
 }
-/* Logo needs no dark mode override — white text on gradient badge is fine in both modes */

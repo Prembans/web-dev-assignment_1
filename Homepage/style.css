@@ -1,4 +1,4 @@
-/* BUG FIX #12: home-page wrapper was unstyled */
+home-page wrapper was unstyled */
 .home-page {
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@ body.dark-mode .home-page {
 }
 
 /* =========================================
-   Navbar (Glassmorphism & Fixed)
+   Navbar (Glassmorphism)
    ========================================= */
 .navbar {
   display: flex;
@@ -36,7 +36,7 @@ body.dark-mode .home-page {
 
 /* Logo styles live in globals.css — shared across all pages */
 
-/* BUG FIX #9: Menu had no gap between links */
+
 .menu {
   display: flex;
   align-items: center;
@@ -65,7 +65,7 @@ body.dark-mode .home-page {
 
 .nav-link:hover::after { width: 100%; }
 
-/* BUG FIX #2: Dark mode toggle button styles */
+
 .theme-toggle {
   background: none;
   border: 2px solid #ddd;
@@ -95,11 +95,10 @@ body.dark-mode .home-page {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  /* FIX: overflow:hidden was clipping the card corners and bottom shadow */
   overflow: visible;
 }
 
-/* BUG FIX #10: Glow elements were completely unstyled */
+
 .hero-bg-glow {
   position: absolute;
   border-radius: 50%;
@@ -149,7 +148,7 @@ body.dark-mode .home-page {
   margin: 0;
 }
 
-/* BUG FIX #6: hero-subtitle had zero CSS rules */
+
 .hero-subtitle {
   font-size: clamp(14px, 2vw, 20px);
   color: #555;
@@ -195,7 +194,7 @@ body.dark-mode .home-page {
 /* =========================================
    Section Title
    ========================================= */
-/* BUG FIX #7: section-title class had zero CSS rules */
+
 .section-title {
   font-family: var(--h2-font-family);
   font-size: clamp(24px, 4vw, 42px);
@@ -206,7 +205,6 @@ body.dark-mode .home-page {
   padding: 0 20px;
   width: 100%;
   transition: color 0.3s ease;
-  /* FIX: Without this, clicking Explore hid the title behind the fixed navbar */
   scroll-margin-top: 80px;
 }
 
@@ -222,7 +220,6 @@ body.dark-mode .home-page {
   margin: 0 auto 100px;
 }
 
-/* BUG FIX #11: movie-link had no CSS — caused layout breaks */
 .movie-link {
   display: block;
   text-decoration: none;
@@ -266,9 +263,6 @@ body.dark-mode .home-page {
   margin: 0;
 }
 
-/* =========================================
-   BUG FIX #3 & #4: Dark Mode (Universal — works on ALL screen sizes)
-   ========================================= */
 body.dark-mode {
   background-color: #0d0d0d;
   color: #eee;
@@ -318,8 +312,6 @@ body.dark-mode .title-frame {
   background: #1a1a1a;
 }
 
-/* FIX: Removed ::before pseudo-element that was causing double icon.
-   Icon is set exclusively via JS textContent in theme.js */
 .theme-icon {
   font-style: normal;
   display: inline-block;

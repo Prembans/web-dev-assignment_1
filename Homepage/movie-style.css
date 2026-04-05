@@ -277,8 +277,7 @@ body.dark-mode .back-btn svg {
   stroke: currentColor;
 }
 
-/* FIX 1: Title uses -webkit-text-fill-color: transparent which overrides color.
-   Must override -webkit-text-fill-color directly, not just color. */
+
 body.dark-mode .detail-title {
   background: linear-gradient(135deg, #ffffff 0%, #aaaaaa 100%);
   -webkit-background-clip: text;
@@ -296,8 +295,7 @@ body.dark-mode .genre-pill {
   border: 1px solid rgba(85, 0, 255, 0.4);
 }
 
-/* FIX 2: .meta-grid had background: #fcfcfc which was never overridden —
-   this was the glowing white card in dark mode. */
+
 body.dark-mode .meta-grid {
   background: #16213e;
   border-left-color: #5500ff;
@@ -312,8 +310,6 @@ body.dark-mode .meta-value {
   color: #ddd;
 }
 
-/* FIX 3: .overview-card had background: #fff and border: 1px solid #eaeaea —
-   the rgba rule from before wasn't specific enough to beat it. */
 body.dark-mode .overview-card {
   background: #16213e;
   border: 1px solid rgba(255, 255, 255, 0.08);

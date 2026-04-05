@@ -4,14 +4,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <title>VAC: Web Development Project</title>
-    <!-- BUG FIX #5: Google Fonts were never imported -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Serif:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="Homepage/globals.css" />
     <link rel="stylesheet" href="Homepage/styleguide.css" />
     <link rel="stylesheet" href="Homepage/style.css" />
-    <!-- BUG FIX #1: theme.js was never linked in the HTML -->
+    
     <script src="Homepage/theme.js" defer></script>
   </head>
   <body>
@@ -29,13 +29,13 @@
       </nav>
 
       <header class="hero-section">
-        <!-- BUG FIX #10: These glows now have CSS rules in style.css -->
+        
         <div class="hero-bg-glow glow-1"></div>
         <div class="hero-bg-glow glow-2"></div>
 
         <div class="hero-content">
           <h1 class="hero-title">VAC:<br />Web Development Project</h1>
-          <!-- BUG FIX #6: hero-subtitle now has CSS -->
+          
           <p class="hero-subtitle">By: Sorokhaibam Prembans Singh</p>
           
           <a href="#movies-section" class="explore-btn" onclick="document.getElementById('movies-section').scrollIntoView({behavior: 'smooth'}); return false;">
@@ -47,11 +47,11 @@
         </div>
       </header>
 
-      <!-- BUG FIX #7: section-title now has CSS -->
+      
       <h2 id="movies-section" class="section-title">Most Anticipated Movies Of 2026</h2>
 
       <section class="movie-section">
-        <!-- BUG FIX #11: movie-link now has proper CSS (display:block, text-decoration:none) -->
+        
         <a href="Pages/Odyssey/index.html" class="movie-link">
           <div class="movie-card">
             <img class="movie-img" src="Asset/odyssey.webp" alt="The Odyssey" />

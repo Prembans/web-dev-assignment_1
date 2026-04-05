@@ -202,14 +202,6 @@ body {
   white-space: pre;
   line-height: 1.5;
 }
-/*
-  ===================================================
-  APPEND THIS TO YOUR EXISTING Homepage/php-style.css
-  ===================================================
-  These rules make the PHP page respect the dark mode
-  class set by theme.js. Base rules (body, navbar,
-  nav-link) are already in globals.css.
-*/
 
 body.dark-mode .php-container {
   background: transparent;
