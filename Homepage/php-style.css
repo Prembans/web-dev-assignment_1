@@ -202,3 +202,63 @@ body {
   white-space: pre;
   line-height: 1.5;
 }
+/*
+  ===================================================
+  APPEND THIS TO YOUR EXISTING Homepage/php-style.css
+  ===================================================
+  These rules make the PHP page respect the dark mode
+  class set by theme.js. Base rules (body, navbar,
+  nav-link) are already in globals.css.
+*/
+
+body.dark-mode .php-container {
+  background: transparent;
+}
+
+body.dark-mode .page-title {
+  color: #f0f0f0;
+}
+
+body.dark-mode .section-subtitle {
+  color: #ccc;
+}
+
+body.dark-mode .code-card {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.08);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+body.dark-mode .question {
+  color: #e0e0e0;
+}
+
+body.dark-mode .intro-text {
+  color: #bbb;
+}
+
+body.dark-mode .intro-list li {
+  color: #bbb;
+}
+
+body.dark-mode .toggle-btn {
+  background: rgba(85, 0, 255, 0.2);
+  color: #c9b8ff;
+  border-color: rgba(85, 0, 255, 0.4);
+}
+
+body.dark-mode .toggle-btn.active,
+body.dark-mode .toggle-btn:hover {
+  background: rgba(85, 0, 255, 0.4);
+  color: #fff;
+}
+
+body.dark-mode .code-block {
+  background: #0f0f0f;
+  border-color: #2a2a2a;
+  color: #a8d8a8;
+}
+
+body.dark-mode .code-block code {
+  color: #a8d8a8;
+}

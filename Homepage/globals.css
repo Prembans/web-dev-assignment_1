@@ -1,105 +1,77 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+:root {
+  --primary-color: #5500ff;
+  --secondary-color: #00a5aa;
+  --background-color: #ffffff;
+  --text-color: #111;
+  --p-font-family: "Poppins", Helvetica, sans-serif;
+  --h2-font-family: "Roboto Serif", Helvetica, serif;
+  --h5-font-family: "Roboto Serif", Helvetica, serif;
+}
+
 * {
-  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-html,
+
 body {
-  margin: 0px;
-  height: 100%;
-}
-/* a blue color as a generic focus style */
-button:focus-visible {
-  outline: 2px solid #4a90e2 !important;
-  outline: -webkit-focus-ring-color auto 5px !important;
-}
-a {
-  text-decoration: none;
-}
-/* @FONTWARNING[{"type": "restricted", "family": "Redressed-Regular", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
-
-@font-face {
-  font-family: "Redressed-Regular";
-  src: local("Redressed-Regular");
-}
-/* @FONTWARNING[{"type": "restricted", "family": "Roboto", "weight": "var(--h5-font-weight)", "style": "normal", "allowsCrossOrigin": false}] */
-
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto");
-}
-/* @FONTWARNING[{"type": "restricted", "family": "Roboto Serif-SemiBold", "weight": "600", "style": "normal", "allowsCrossOrigin": false}] */
-
-@font-face {
-  font-family: "Roboto Serif-SemiBold";
-  src: local("Roboto Serif-SemiBold");
-}
-/* @FONTWARNING[{"type": "restricted", "family": "REM", "weight": "var(--p-font-weight)", "style": "normal", "allowsCrossOrigin": false}] */
-
-@font-face {
-  font-family: "REM";
-  src: local("REM");
-}
-/* ==========
-   DARK MODE
-   ========== */
-/* 1. Default Light Mode (Force these when NOT in dark-mode) */
-body:not(.dark-mode), 
-body:not(.dark-mode) .home-page {
-  background-color: #ffffff !important;
-  color: #222222 !important;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--p-font-family);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body:not(.dark-mode) .navbar {
-  background-color: rgba(255, 255, 255, 0.85) !important;
+/* =========================================
+   SHARED DARK MODE — loaded on every page
+   via globals.css so theme carries across
+   all pages (movie pages, PHP page, homepage)
+   ========================================= */
+body.dark-mode {
+  --background-color: #0d0d0d;
+  --text-color: #eee;
+  background-color: #0d0d0d;
+  color: #eee;
 }
 
-/* Fix for the White Titles in Light Mode */
-body:not(.dark-mode) h1, 
-body:not(.dark-mode) h2, 
-body:not(.dark-mode) h3,
-body:not(.dark-mode) .section-title,
-body:not(.dark-mode) .page-title,
-body:not(.dark-mode) .detail-title {
-  color: #111111 !important;
-  -webkit-text-fill-color: initial !important; /* Reset the gradient fill */
-  background: none !important; /* Remove any background clipping */
-}
-
-/* 2. Dark Mode Overrides */
-body.dark-mode, 
-body.dark-mode .home-page {
-  background-color: #121212 !important;
-  color: #f0f0f0 !important;
-}
-
+/* Navbar — shared across all pages */
 body.dark-mode .navbar {
-  background-color: rgba(18, 18, 18, 0.9) !important;
-  border-bottom: 1px solid #333 !important;
+  background-color: rgba(15, 15, 15, 0.9) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 
-body.dark-mode h1, 
-body.dark-mode h2, 
-body.dark-mode h3,
-body.dark-mode .section-title,
-body.dark-mode .page-title,
-body.dark-mode .detail-title,
-body.dark-mode .hero-title {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
+body.dark-mode .nav-link {
+  color: #eee !important;
 }
 
-/* Fix for Cards in Light vs Dark */
-body:not(.dark-mode) .movie-card,
-body:not(.dark-mode) .code-card,
-body:not(.dark-mode) .meta-grid {
-  background-color: #ffffff !important;
-  border: 1px solid #eaeaea !important;
+/* =========================================
+   SHARED LOGO — defined here once so the
+   badge style and hover animation work on
+   every page without repeating in each CSS.
+   ========================================= */
+.logo {
+  font-family: "Redressed-Regular", "Playfair Display", serif;
+  font-size: 38px;
+  font-weight: bold;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  background: linear-gradient(135deg, rgba(85, 0, 255, 1) 0%, rgba(255, 38, 0, 1) 100%);
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(85, 0, 255, 0.3);
+  text-decoration: none;
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-body.dark-mode .movie-card,
-body.dark-mode .code-card,
-body.dark-mode .meta-grid {
-  background-color: #1e1e1e !important;
-  border: 1px solid #333 !important;
+.logo:hover {
+  transform: rotate(-10deg) scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 38, 0, 0.4);
 }
+/* Logo needs no dark mode override — white text on gradient badge is fine in both modes */

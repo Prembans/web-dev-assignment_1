@@ -29,27 +29,7 @@ body {
   z-index: 100;
 }
 
-.logo {
-  font-family: "Redressed-Regular", "Playfair Display", serif;
-  font-size: 38px;
-  font-weight: bold;
-  color: #fff;
-  background: linear-gradient(135deg, rgba(85, 0, 255, 1) 0%, rgba(255, 38, 0, 1) 100%);
-  width: 55px;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 14px;
-  box-shadow: 0 6px 15px rgba(85, 0, 255, 0.3);
-  cursor: default;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.logo:hover {
-  transform: rotate(-10deg) scale(1.05);
-  box-shadow: 0 8px 20px rgba(255, 38, 0, 0.4);
-}
+/* Logo styles live in globals.css — shared across all pages */
 
 .menu {
   display: flex;
@@ -236,28 +216,115 @@ body {
   color: #444;
 }
 
+/* =========================================
+   Responsive
+   ========================================= */
 @media (max-width: 900px) {
   .movie-content-split {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .poster-column {
     flex: 0 0 auto;
     width: 80%;
     max-width: 400px;
   }
-  
+
   .detail-title {
     font-size: 42px;
     text-align: center;
   }
-  
+
   .detail-tagline {
     text-align: center;
   }
-  
+
   .detail-genres {
     justify-content: center;
   }
+}
+
+/* =========================================
+   Dark Mode
+   ========================================= */
+body.dark-mode .navbar {
+  background-color: rgba(15, 15, 15, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .nav-link {
+  color: #ddd;
+}
+
+body.dark-mode .nav-link:hover {
+  color: #a78bfa;
+}
+
+body.dark-mode .movie-detail-container {
+  background: transparent;
+}
+
+body.dark-mode .back-btn {
+  color: #bbb;
+}
+
+body.dark-mode .back-btn:hover {
+  color: #fff;
+}
+
+body.dark-mode .back-btn svg {
+  stroke: currentColor;
+}
+
+/* FIX 1: Title uses -webkit-text-fill-color: transparent which overrides color.
+   Must override -webkit-text-fill-color directly, not just color. */
+body.dark-mode .detail-title {
+  background: linear-gradient(135deg, #ffffff 0%, #aaaaaa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.dark-mode .detail-tagline {
+  color: #999;
+}
+
+body.dark-mode .genre-pill {
+  background: rgba(85, 0, 255, 0.2);
+  color: #c4b5fd;
+  border: 1px solid rgba(85, 0, 255, 0.4);
+}
+
+/* FIX 2: .meta-grid had background: #fcfcfc which was never overridden —
+   this was the glowing white card in dark mode. */
+body.dark-mode .meta-grid {
+  background: #16213e;
+  border-left-color: #5500ff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .meta-label {
+  color: #666;
+}
+
+body.dark-mode .meta-value {
+  color: #ddd;
+}
+
+/* FIX 3: .overview-card had background: #fff and border: 1px solid #eaeaea —
+   the rgba rule from before wasn't specific enough to beat it. */
+body.dark-mode .overview-card {
+  background: #16213e;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 4px solid #5500ff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .overview-card h2 {
+  color: #f0f0f0;
+}
+
+body.dark-mode .overview-card p {
+  color: #9ca3af;
 }
