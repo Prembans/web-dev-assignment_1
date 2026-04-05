@@ -1,0 +1,106 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Redressed-Regular", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Redressed-Regular";
+  src: local("Redressed-Regular");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Roboto", "weight": "var(--h5-font-weight)", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Roboto Serif-SemiBold", "weight": "600", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Roboto Serif-SemiBold";
+  src: local("Roboto Serif-SemiBold");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "REM", "weight": "var(--p-font-weight)", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "REM";
+  src: local("REM");
+}
+/* ==========
+   DARK MODE
+   ========== */
+
+/* 1. Universal Dark Mode Styles */
+body.dark-mode, 
+body.dark-mode .home-page {
+  background-color: #121212 !important;
+  color: #f0f0f0 !important;
+}
+
+/* Fix the Navbar and its Links */
+body.dark-mode .navbar {
+  background-color: #1a1a1a !important;
+  border-bottom: 1px solid #333 !important;
+}
+
+body.dark-mode .nav-link {
+  color: #ffffff !important; /* Forces Home/Php Code text to white */
+}
+
+/* Fix the "By: Sorokhaibam..." text visibility */
+body.dark-mode .hero-subtitle {
+  color: #aaaaaa !important; /* Light gray for contrast */
+  -webkit-text-fill-color: #aaaaaa !important;
+}
+
+/* Force Titles to White and kill gradients */
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3,
+body.dark-mode .section-title,
+body.dark-mode .page-title,
+body.dark-mode .hero-title,
+body.dark-mode .detail-title {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background: none !important;
+}
+
+/* Fix Cards and Meta Grid */
+body.dark-mode .movie-card,
+body.dark-mode .code-card,
+body.dark-mode .overview-card,
+body.dark-mode .meta-grid {
+  background-color: #1e1e1e !important;
+  border: 1px solid #333 !important;
+}
+
+/* 2. Universal Light Mode Styles (The Reset) */
+body:not(.dark-mode), 
+body:not(.dark-mode) .home-page {
+  background-color: #ffffff !important;
+  color: #111111 !important;
+}
+
+body:not(.dark-mode) .nav-link {
+  color: #111111 !important;
+}
+
+body:not(.dark-mode) .hero-subtitle {
+  color: #555555 !important;
+  -webkit-text-fill-color: #555555 !important;
+}
