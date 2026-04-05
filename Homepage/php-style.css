@@ -3,8 +3,10 @@
    ========================================= */
 body {
   margin: 0;
-  background-color: var(--background-color);
+  background: linear-gradient(135deg, #0d0a1a 0%, #050f0f 50%, #120505 100%);
+  color: #eee;
   font-family: var(--p-font-family);
+  min-height: 100vh;
 }
 
 .home-page {
@@ -20,10 +22,10 @@ body {
   align-items: center;
   width: 100%;
   padding: 15px 50px;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(13, 13, 13, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -54,7 +56,7 @@ body {
 .nav-link {
   font-family: var(--h5-font-family);
   font-size: 20px;
-  color: #222;
+  color: #ddd;
   text-decoration: none;
   font-weight: 600;
   position: relative;
@@ -69,13 +71,13 @@ body {
   height: 3px;
   bottom: 0;
   left: 0;
-  background: linear-gradient(90deg, rgba(85, 0, 255, 1) 0%, rgba(0, 165, 170, 1) 100%);
+  background: linear-gradient(90deg, #5500ff, #00a5aa);
   transition: width 0.3s ease;
   border-radius: 2px;
 }
 
 .nav-link:hover {
-  color: rgba(85, 0, 255, 1);
+  color: #a78bfa;
 }
 
 .nav-link:hover::after {
@@ -101,7 +103,7 @@ body {
   font-weight: 900;
   text-align: center;
   margin: 0 0 40px 0;
-  background: linear-gradient(90deg, rgba(85, 0, 255, 1) 0%, rgba(0, 165, 170, 1) 100%);
+  background: linear-gradient(90deg, #5500ff, #00a5aa);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -111,32 +113,34 @@ body {
 
 /* Code Cards */
 .code-card {
-  background: #fff;
-  border: 1px solid #eaeaea;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .code-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
 }
 
 .question {
   font-family: var(--h4-font-family);
   font-size: 24px;
   font-weight: 600;
-  color: #111;
+  color: #eee;
   margin: 0 0 20px 0;
 }
 
 /* Show/Hide Button */
 .toggle-btn {
-  background: #f0f0f0;
-  color: #333;
-  border: 1px solid #ddd;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ddd;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 10px 20px;
   border-radius: 50px;
   font-family: var(--p-font-family);
@@ -147,15 +151,15 @@ body {
 }
 
 .toggle-btn:hover {
-  background: var(--primary-color);
+  background: #5500ff;
   color: #fff;
-  border-color: var(--primary-color);
+  border-color: #5500ff;
 }
 
 .toggle-btn.active {
-  background: #222;
+  background: #00a5aa;
   color: #fff;
-  border-color: #222;
+  border-color: #00a5aa;
 }
 
 /* Smooth Dropdown Magic */
@@ -175,7 +179,8 @@ body {
 
 /* Mac Terminal Style Code Block */
 .code-block {
-  background: #1e1e1e;
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   margin-top: 25px;
   padding: 20px;
@@ -201,56 +206,4 @@ body {
   color: #a6e22e; /* Classic code green */
   white-space: pre;
   line-height: 1.5;
-}
-
-body.dark-mode .php-container {
-  background: transparent;
-}
-
-body.dark-mode .page-title {
-  color: #f0f0f0;
-}
-
-body.dark-mode .section-subtitle {
-  color: #ccc;
-}
-
-body.dark-mode .code-card {
-  background: rgba(255,255,255,0.04);
-  border-color: rgba(255,255,255,0.08);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-}
-
-body.dark-mode .question {
-  color: #e0e0e0;
-}
-
-body.dark-mode .intro-text {
-  color: #bbb;
-}
-
-body.dark-mode .intro-list li {
-  color: #bbb;
-}
-
-body.dark-mode .toggle-btn {
-  background: rgba(85, 0, 255, 0.2);
-  color: #c9b8ff;
-  border-color: rgba(85, 0, 255, 0.4);
-}
-
-body.dark-mode .toggle-btn.active,
-body.dark-mode .toggle-btn:hover {
-  background: rgba(85, 0, 255, 0.4);
-  color: #fff;
-}
-
-body.dark-mode .code-block {
-  background: #0f0f0f;
-  border-color: #2a2a2a;
-  color: #a8d8a8;
-}
-
-body.dark-mode .code-block code {
-  color: #a8d8a8;
 }

@@ -4,15 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <title>VAC: Web Development Project</title>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Serif:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="Homepage/globals.css" />
     <link rel="stylesheet" href="Homepage/styleguide.css" />
     <link rel="stylesheet" href="Homepage/style.css" />
-    
-    <script src="Homepage/theme.js" defer></script>
   </head>
   <body>
     <div class="home-page">
@@ -21,90 +18,75 @@
         <div class="menu">
           <a href="index.html" class="nav-link">Home</a>
           <a href="Pages/PhpCode/index.html" class="nav-link">Php Code</a>
-          <!-- Dark mode toggle — icon is set by theme.js, no hardcoded emoji to avoid double icon -->
-          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
-            <span class="theme-icon"></span>
-          </button>
+          <!-- Toggle button removed — dark mode is the permanent default -->
         </div>
       </nav>
 
       <header class="hero-section">
-        
         <div class="hero-bg-glow glow-1"></div>
         <div class="hero-bg-glow glow-2"></div>
 
         <div class="hero-content">
           <h1 class="hero-title">VAC:<br />Web Development Project</h1>
-          
           <p class="hero-subtitle">By: Sorokhaibam Prembans Singh</p>
-          
           <a href="#movies-section" class="explore-btn" onclick="document.getElementById('movies-section').scrollIntoView({behavior: 'smooth'}); return false;">
             Explore
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </a>
         </div>
       </header>
 
-      
       <h2 id="movies-section" class="section-title">My Most Anticipated Movies Of 2026</h2>
 
       <section class="movie-section">
-        
         <a href="Pages/Odyssey/index.html" class="movie-link">
           <div class="movie-card">
             <img class="movie-img" src="Asset/odyssey.webp" alt="The Odyssey" />
             <div class="title-frame"><h3>The Odyssey</h3></div>
           </div>
         </a>
-
         <a href="Pages/Avengers/index.html" class="movie-link">
           <div class="movie-card">
             <img class="movie-img" src="Asset/avengers.webp" alt="Avengers: Doomsday" />
             <div class="title-frame"><h3>Avengers: Doomsday</h3></div>
           </div>
         </a>
-
         <a href="Pages/SpiderMan/index.html" class="movie-link">
           <div class="movie-card">
             <img class="movie-img" src="Asset/spiderman.webp" alt="Spider-Man: Brand New Day" />
-            <div class="title-frame"><h3>Spider-Man:<br/>Brand new Day</h3></div>
+            <div class="title-frame"><h3>Spider-Man:<br/>Brand New Day</h3></div>
           </div>
         </a>
-
         <a href="Pages/Dune/index.html" class="movie-link">
           <div class="movie-card">
             <img class="movie-img" src="Asset/dune.webp" alt="Dune: Part Three" />
             <div class="title-frame"><h3>Dune: Part Three</h3></div>
           </div>
         </a>
-
         <a href="Pages/Digger/index.html" class="movie-link">
           <div class="movie-card">
             <img class="movie-img" src="Asset/digger.webp" alt="Digger" />
             <div class="title-frame"><h3>Digger</h3></div>
           </div>
         </a>
-
         <a href="Pages/Ramayana/index.html" class="movie-link">
           <div class="movie-card">
             <img class="movie-img" src="Asset/ramayana.webp" alt="Ramayana" />
             <div class="title-frame"><h3>Ramayana</h3></div>
           </div>
         </a>
-
         <a href="Pages/MortalKombat/index.html" class="movie-link">
           <div class="movie-card">
             <img class="movie-img" src="Asset/mortalkombat.webp" alt="Mortal Kombat 2" />
             <div class="title-frame"><h3>Mortal Kombat 2</h3></div>
           </div>
         </a>
-
         <a href="Pages/Godzilla/index.html" class="movie-link">
           <div class="movie-card">
             <img class="movie-img" src="Asset/godzilla.webp" alt="Godzilla" />
-            <div class="title-frame"><h3>Godzilla</h3></div>
+            <div class="title-frame"><h3>Godzilla Minus Zero</h3></div>
           </div>
         </a>
       </section>

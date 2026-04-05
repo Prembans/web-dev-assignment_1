@@ -1,13 +1,17 @@
 :root {
+  /* These will override the styleguide.css variables if globals.css is loaded second */
   --primary-color: #5500ff;
   --secondary-color: #00a5aa;
-  --background-color: #ffffff;
-  --text-color: #111;
+  --background-color: #0d0d0d;
+  --text-color: #eee;
   --p-font-family: "Poppins", Helvetica, sans-serif;
   --h2-font-family: "Roboto Serif", Helvetica, serif;
   --h5-font-family: "Roboto Serif", Helvetica, serif;
 }
 
+/* =========================================
+   Reset
+   ========================================= */
 * {
   margin: 0;
   padding: 0;
@@ -19,35 +23,31 @@ body {
   color: var(--text-color);
   font-family: var(--p-font-family);
   overflow-x: hidden;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body.dark-mode {
-  --background-color: #0d0d0d;
-  --text-color: #eee;
-  background-color: #0d0d0d;
-  color: #eee;
+.navbar {
+  background-color: rgba(13, 13, 13, 0.85); /* Try to rely on specificity over !important */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Navbar — shared across all pages */
-body.dark-mode .navbar {
-  background-color: rgba(15, 15, 15, 0.9) !important;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+.nav-link {
+  color: #ddd;
 }
 
-body.dark-mode .nav-link {
-  color: #eee !important;
+.nav-link:hover {
+  color: #a78bfa;
 }
 
+/* =========================================
+   SHARED LOGO — badge style, every page
+   ========================================= */
 .logo {
   font-family: "Redressed-Regular", "Playfair Display", serif;
   font-size: 38px;
   font-weight: bold;
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
+  color: #fff; 
   background: linear-gradient(135deg, rgba(85, 0, 255, 1) 0%, rgba(255, 38, 0, 1) 100%);
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
+  background-clip: border-box; /* Removed redundant -webkit-background-clip */
   width: 55px;
   height: 55px;
   display: flex;
@@ -56,8 +56,9 @@ body.dark-mode .nav-link {
   border-radius: 14px;
   box-shadow: 0 6px 15px rgba(85, 0, 255, 0.3);
   text-decoration: none;
-  cursor: default;
+  cursor: pointer; /* Changed from 'default' so users know it is clickable if it is an <a> tag */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
 }
 
 .logo:hover {
