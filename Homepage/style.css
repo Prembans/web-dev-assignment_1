@@ -317,3 +317,42 @@
   text-align: center;
   line-height: 1.3;
 }
+/* =========================================
+   MOBILE RESPONSIVENESS
+   ========================================= */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px !important;
+  }
+
+  .menu {
+    gap: 15px !important; /* Tighten the space between links */
+  }
+
+  .nav-link {
+    font-size: 16px !important;
+  }
+  .hero-section {
+    margin-top: 20px; /* Less gap on small screens */
+    width: 95%;      /* Don't let it touch the very edges of the phone */
+    min-height: 300px; /* Let it grow if the text is long */
+    height: auto;     /* Remove any fixed height */
+    padding: 40px 20px; /* Give text some room inside the card */
+  }
+
+  .hero-title {
+    font-size: 28px !important; /* Shrink the big title so it doesn't overlap */
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 16px !important;
+  }
+
+  /* Make the movie grid 2 columns instead of 4 so they aren't tiny */
+  .movie-section {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px;
+    padding: 10px;
+  }
+}
