@@ -1,0 +1,142 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Redressed-Regular", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Redressed-Regular";
+  src: local("Redressed-Regular");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Roboto", "weight": "var(--h5-font-weight)", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Roboto Serif-SemiBold", "weight": "600", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Roboto Serif-SemiBold";
+  src: local("Roboto Serif-SemiBold");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "REM", "weight": "var(--p-font-weight)", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "REM";
+  src: local("REM");
+}
+/* ==========
+   DARK MODE
+   ========== */
+
+/* Force the body AND the main container to turn dark */
+body.dark-mode, 
+body.dark-mode .home-page {
+  background-color: #121212 !important;
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .navbar {
+  background-color: rgba(18, 18, 18, 0.85) !important;
+  border-bottom: 1px solid #333 !important;
+}
+
+body.dark-mode .nav-link {
+  color: #f0f0f0 !important;
+}
+
+/* Force all titles and headings to white, overriding any gradient fills */
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode .section-title, 
+body.dark-mode .question, 
+body.dark-mode .detail-title, 
+body.dark-mode .page-title,
+body.dark-mode .hero-title,
+body.dark-mode .title-frame h3 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important; /* <--- THIS FIXES THE MOVIE TITLE */
+}
+
+/* Make subtitle and normal text light gray */
+body.dark-mode .hero-subtitle,
+body.dark-mode .intro-text,
+body.dark-mode .intro-list,
+body.dark-mode p,
+body.dark-mode .meta-label,
+body.dark-mode .meta-value {
+  color: #bbbbbb !important;
+}
+
+/* Darken ALL the cards (Added .meta-grid!) */
+body.dark-mode .movie-card,
+body.dark-mode .code-card,
+body.dark-mode .overview-card,
+body.dark-mode .meta-grid { /* <--- THIS FIXES THE WHITE INFO BOX */
+  background-color: #1e1e1e !important;
+  border: 1px solid #333 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Fix the back button text color */
+body.dark-mode .back-btn {
+  color: #bbbbbb !important;
+}
+
+body.dark-mode .back-btn:hover {
+  color: #ffffff !important;
+}
+
+/* Styling for our Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+/* Fix the "Show Code" button for Dark Mode */
+body.dark-mode .toggle-btn {
+  background-color: #333 !important;
+  color: #f0f0f0 !important;
+  border-color: #444 !important;
+}
+
+body.dark-mode .toggle-btn:hover {
+  background-color: var(--primary-color) !important;
+  color: #ffffff !important;
+  border-color: var(--primary-color) !important;
+}
+
+body.dark-mode .toggle-btn.active {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+/* Fix the Terminal Code Block so it pops against the dark card */
+body.dark-mode .code-block {
+  background-color: #050505 !important; /* Pure dark so it separates from the card */
+  border: 1px solid #222 !important;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.8) !important;
+}

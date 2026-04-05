@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>PHP Introduction & Code Examples</title>
+    <link rel="stylesheet" href="../../Homepage/globals.css" />
+    <link rel="stylesheet" href="../../Homepage/styleguide.css" />
+    <link rel="stylesheet" href="../../Homepage/php-style.css" />
+    <script src="../../Homepage/theme.js"></script>
+  </head>
+  <body>
+    <div class="home-page">
+      <nav class="navbar">
+        <a href="../../index.html" class="logo" style="text-decoration: none;">P</a>
+        <div class="menu">
+          <a href="../../index.html" class="nav-link">Home</a>
+          <a href="#" class="nav-link">Php Code</a>
+        </div>
+      </nav>
+
+      <main class="php-container">
+        <h1 class="page-title">Understanding PHP</h1>
+
+        <div class="code-card" style="border-left: 4px solid var(--primary-color);">
+          <h2 class="question">What is PHP?</h2>
+          <p class="intro-text">
+            <strong>PHP (Hypertext Preprocessor)</strong> is a widely-used, open-source server-side scripting language designed specifically for web development. 
+          </p>
+          <p class="intro-text">
+            Unlike HTML, CSS, and JavaScript—which are executed in the user's web browser (client-side)—PHP code is executed on the web server. The server processes the PHP code and then sends pure, readable HTML back to the user's browser.
+          </p>
+          <h3 class="question" style="font-size: 20px; margin-top: 30px;">What can PHP do?</h3>
+          <ul class="intro-list">
+            <li><strong>Dynamic Content:</strong> It can generate dynamic page content.</li>
+            <li><strong>Form Handling:</strong> It can collect data from web forms.</li>
+            <li><strong>Database Integration:</strong> PHP is heavily used to add, delete, and modify data in databases (like MySQL).</li>
+            <li><strong>Security:</strong> It can encrypt sensitive data.</li>
+          </ul>
+        </div>
+
+        <h2 class="section-subtitle">10 Essential PHP Concepts</h2>
+
+        <!-- Card 1 -->
+        <div class="code-card">
+          <h3 class="question">1. How do you print "Hello, World!" to the screen?</h3>
+          <button class="toggle-btn" onclick="toggleCode(this)">Show Code</button>
+          <div class="code-wrapper"><div class="code-inner"><div class="code-block"><code>&lt;?php
+    echo "Hello, World!";
+?&gt;</code></div></div></div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="code-card">
+          <h3 class="question">2. How do you create variables and add two numbers?</h3>
+          <button class="toggle-btn" onclick="toggleCode(this)">Show Code</button>
+          <div class="code-wrapper"><div class="code-inner"><div class="code-block"><code>&lt;?php
+    $num1 = 15;
+    $num2 = 25;
+    $sum = $num1 + $num2;
+    echo "The sum is: " . $sum;
+?&gt;</code></div></div></div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="code-card">
+          <h3 class="question">3. How do you check if a number is Even or Odd using an If/Else statement?</h3>
+          <button class="toggle-btn" onclick="toggleCode(this)">Show Code</button>
+          <div class="code-wrapper"><div class="code-inner"><div class="code-block"><code>&lt;?php
+    $number = 8;
+    if ($number % 2 == 0) {
+        echo "$number is Even";
+    } else {
+        echo "$number is Odd";
+    }
+?&gt;</code></div></div></div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="code-card">
+          <h3 class="question">4. How do you use a 'For' Loop to count from 1 to 5?</h3>
+          <button class="toggle-btn" onclick="toggleCode(this)">Show Code</button>
+          <div class="code-wrapper"><div class="code-inner"><div class="code-block"><code>&lt;?php
+    for ($i = 1; $i <= 5; $i++) {
+        echo "The number is: $i &lt;br&gt;";
+    }
+?&gt;</code></div></div></div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="code-card">
+          <h3 class="question">5. How do you create an Array and loop through it?</h3>
+          <button class="toggle-btn" onclick="toggleCode(this)">Show Code</button>
+          <div class="code-wrapper"><div class="code-inner"><div class="code-block"><code>&lt;?php
+    $movies = array("Avengers", "Godzilla", "Dune");
+    foreach ($movies as $movie) {
+        echo $movie . "&lt;br&gt;";
+    }
+?&gt;</code></div></div></div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="code-card">
+          <h3 class="question">6. How do you create a custom Function to calculate a factorial?</h3>
+          <button class="toggle-btn" onclick="toggleCode(this)">Show Code</button>
+          <div class="code-wrapper"><div class="code-inner"><div class="code-block"><code>&lt;?php
+    function factorial($n) {
+        if ($n <= 1) { return 1; } 
+        else { return $n * factorial($n - 1); }
+    }
+    echo "Factorial of 5 is: " . factorial(5);
+?&gt;</code></div></div></div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="code-card">
+          <h3 class="question">7. How do you handle form data submitted via POST?</h3>
+          <button class="toggle-btn" onclick="toggleCode(this)">Show Code</button>
+          <div class="code-wrapper"><div class="code-inner"><div class="code-block"><code>&lt;?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $name = htmlspecialchars($_POST['fname']);
+        if (empty($name)) { echo "Name is empty"; } 
+        else { echo "Welcome, " . $name; }
+    }
+?&gt;</code></div></div></div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="code-card">
+          <h3 class="question">8. How do you start a Session and set a Session variable?</h3>
+          <button class="toggle-btn" onclick="toggleCode(this)">Show Code</button>
+          <div class="code-wrapper"><div class="code-inner"><div class="code-block"><code>&lt;?php
+    session_start();
+    $_SESSION["username"] = "AdminUser";
+    $_SESSION["role"] = "Administrator";
+    echo "Session variables are set.";
+?&gt;</code></div></div></div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="code-card">
+          <h3 class="question">9. How do you safely read the contents of a file?</h3>
+          <button class="toggle-btn" onclick="toggleCode(this)">Show Code</button>
+          <div class="code-wrapper"><div class="code-inner"><div class="code-block"><code>&lt;?php
+    $filename = "webdictionary.txt";
+    $myfile = fopen($filename, "r") or die("Unable to open file!");
+    while(!feof($myfile)) {
+        echo fgets($myfile) . "&lt;br&gt;";
+    }
+    fclose($myfile);
+?&gt;</code></div></div></div>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="code-card">
+          <h3 class="question">10. How do you connect to a MySQL Database using PDO?</h3>
+          <button class="toggle-btn" onclick="toggleCode(this)">Show Code</button>
+          <div class="code-wrapper"><div class="code-inner"><div class="code-block"><code>&lt;?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "password";
+    try {
+        $conn = new PDO("mysql:host=$servername;dbname=myDB", $username, $password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo "Connected successfully";
+    } catch(PDOException $e) {
+        echo "Connection failed: " . $e->getMessage();
+    }
+?&gt;</code></div></div></div>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      function toggleCode(btn) {
+        const codeWrapper = btn.nextElementSibling;
+        codeWrapper.classList.toggle('open');
+        if (codeWrapper.classList.contains('open')) {
+          btn.textContent = 'Hide Code';
+          btn.classList.add('active');
+        } else {
+          btn.textContent = 'Show Code';
+          btn.classList.remove('active');
+        }
+      }
+    </script>
+  </body>
+</html>
