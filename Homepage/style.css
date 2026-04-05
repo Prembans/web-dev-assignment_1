@@ -333,11 +333,10 @@
     font-size: 16px !important;
   }
   .hero-section {
-    margin-top: 20px; /* Less gap on small screens */
-    width: 95%;      /* Don't let it touch the very edges of the phone */
-    min-height: 300px; /* Let it grow if the text is long */
-    height: auto;     /* Remove any fixed height */
-    padding: 40px 20px; /* Give text some room inside the card */
+    margin-top: 80px !important; 
+    margin-bottom: 40px !important; 
+    height: auto !important;
+    min-height: 250px !important;
   }
 
   .hero-title {

@@ -43,8 +43,30 @@ a {
 /* ==========
    DARK MODE
    ========== */
+/* 1. Default Light Mode (Force these when NOT in dark-mode) */
+body:not(.dark-mode), 
+body:not(.dark-mode) .home-page {
+  background-color: #ffffff !important;
+  color: #222222 !important;
+}
 
-/* Force the body AND the main container to turn dark */
+body:not(.dark-mode) .navbar {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Fix for the White Titles in Light Mode */
+body:not(.dark-mode) h1, 
+body:not(.dark-mode) h2, 
+body:not(.dark-mode) h3,
+body:not(.dark-mode) .section-title,
+body:not(.dark-mode) .page-title,
+body:not(.dark-mode) .detail-title {
+  color: #111111 !important;
+  -webkit-text-fill-color: initial !important; /* Reset the gradient fill */
+  background: none !important; /* Remove any background clipping */
+}
+
+/* 2. Dark Mode Overrides */
 body.dark-mode, 
 body.dark-mode .home-page {
   background-color: #121212 !important;
@@ -52,91 +74,32 @@ body.dark-mode .home-page {
 }
 
 body.dark-mode .navbar {
-  background-color: rgba(18, 18, 18, 0.85) !important;
+  background-color: rgba(18, 18, 18, 0.9) !important;
   border-bottom: 1px solid #333 !important;
 }
 
-body.dark-mode .nav-link {
-  color: #f0f0f0 !important;
-}
-
-/* Force all titles and headings to white, overriding any gradient fills */
 body.dark-mode h1, 
 body.dark-mode h2, 
-body.dark-mode h3, 
-body.dark-mode .section-title, 
-body.dark-mode .question, 
-body.dark-mode .detail-title, 
+body.dark-mode h3,
+body.dark-mode .section-title,
 body.dark-mode .page-title,
-body.dark-mode .hero-title,
-body.dark-mode .title-frame h3 {
+body.dark-mode .detail-title,
+body.dark-mode .hero-title {
   color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important; /* <--- THIS FIXES THE MOVIE TITLE */
+  -webkit-text-fill-color: #ffffff !important;
 }
 
-/* Make subtitle and normal text light gray */
-body.dark-mode .hero-subtitle,
-body.dark-mode .intro-text,
-body.dark-mode .intro-list,
-body.dark-mode p,
-body.dark-mode .meta-label,
-body.dark-mode .meta-value {
-  color: #bbbbbb !important;
+/* Fix for Cards in Light vs Dark */
+body:not(.dark-mode) .movie-card,
+body:not(.dark-mode) .code-card,
+body:not(.dark-mode) .meta-grid {
+  background-color: #ffffff !important;
+  border: 1px solid #eaeaea !important;
 }
 
-/* Darken ALL the cards (Added .meta-grid!) */
 body.dark-mode .movie-card,
 body.dark-mode .code-card,
-body.dark-mode .overview-card,
-body.dark-mode .meta-grid { /* <--- THIS FIXES THE WHITE INFO BOX */
+body.dark-mode .meta-grid {
   background-color: #1e1e1e !important;
   border: 1px solid #333 !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
-}
-
-/* Fix the back button text color */
-body.dark-mode .back-btn {
-  color: #bbbbbb !important;
-}
-
-body.dark-mode .back-btn:hover {
-  color: #ffffff !important;
-}
-
-/* Styling for our Toggle Button */
-.theme-toggle {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  margin-left: 20px;
-  transition: transform 0.2s ease;
-}
-
-.theme-toggle:hover {
-  transform: scale(1.1);
-}
-/* Fix the "Show Code" button for Dark Mode */
-body.dark-mode .toggle-btn {
-  background-color: #333 !important;
-  color: #f0f0f0 !important;
-  border-color: #444 !important;
-}
-
-body.dark-mode .toggle-btn:hover {
-  background-color: var(--primary-color) !important;
-  color: #ffffff !important;
-  border-color: var(--primary-color) !important;
-}
-
-body.dark-mode .toggle-btn.active {
-  background-color: #000000 !important;
-  border-color: #000000 !important;
-}
-
-/* Fix the Terminal Code Block so it pops against the dark card */
-body.dark-mode .code-block {
-  background-color: #050505 !important; /* Pure dark so it separates from the card */
-  border: 1px solid #222 !important;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.8) !important;
 }
