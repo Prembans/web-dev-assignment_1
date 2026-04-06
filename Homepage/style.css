@@ -252,61 +252,7 @@ body {
 /* =========================================
    Mobile — Tablet (≤768px)
    ========================================= */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 10px 4%;
-  }
 
-  .menu {
-    gap: 18px;
-  }
-
-  .nav-link {
-    font-size: 14px;
-  }
-
-  .logo {
-    width: 44px !important;
-    height: 44px !important;
-    font-size: 28px !important;
-    border-radius: 11px !important;
-  }
-
-  .hero-content {
-    padding: 40px 24px;
-    width: 92%;
-  }
-
-  .glow-1 { width: 280px; height: 280px; }
-  .glow-2 { width: 220px; height: 220px; }
-
-  .explore-btn {
-    padding: 12px 28px;
-  }
-
-  .section-title {
-    margin: 60px 0 28px;
-  }
-
-  .movie-section {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 16px;
-    width: 92%;
-  }
-
-  .title-frame {
-    min-height: 60px;
-    padding: 12px 14px;
-  }
-
-  .title-frame h3 {
-    font-size: 13px;
-  }
-}
-
-/* =========================================
-   Mobile — Small phones (≤480px)
-   ========================================= */
 @media (max-width: 900px) {
   .movie-content-split {
     flex-direction: column;
