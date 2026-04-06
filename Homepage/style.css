@@ -1,18 +1,21 @@
 /* =========================================
    Home Page Wrapper
    ========================================= */
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #0d0a1a 0%, #050f0f 50%, #120505 100%);
+  color: #eee;
+  font-family: var(--p-font-family);
+  min-height: 100vh;
+}
+
 .home-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #0d0a1a 0%, #050f0f 50%, #120505 100%);
 }
 
-/* =========================================
-   Navbar
-   ========================================= 
-*/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -27,6 +30,7 @@
   top: 0;
   z-index: 100;
 }
+
 /* Logo styles live in globals.css — shared across all pages */
 
 .menu {
@@ -65,7 +69,8 @@
 .nav-link:hover::after {
   width: 100%;
 }
-/* =========================================
+/*
+=======================================
    Hero Section
    ========================================= */
 .hero-section {
