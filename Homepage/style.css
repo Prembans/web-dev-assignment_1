@@ -11,12 +11,12 @@
 
 /* =========================================
    Navbar
-   ========================================= */
+   ========================================= 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: auto;
+  width: 100%;
   padding: 15px 50px;
   background-color: rgba(13, 13, 13, 0.85);
   backdrop-filter: blur(12px);
@@ -26,7 +26,6 @@
   top: 0;
   z-index: 100;
 }
-
 /* Logo styles live in globals.css — shared across all pages */
 
 .menu {
