@@ -250,9 +250,8 @@ body {
 }
 
 /* =========================================
-   Mobile — Tablet (≤768px)
+   Responsive
    ========================================= */
-
 @media (max-width: 900px) {
   .movie-content-split {
     flex-direction: column;
